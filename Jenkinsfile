@@ -53,14 +53,17 @@ pipeline {
               tagRule : tagMatchRules,
               customProperties : [
                 [key: 'Jenkins Build Number', value: "${env.BUILD_ID}"],
-                [key: 'Git commit', value: "${env.GIT_COMMIT}"]
+                [key: 'Git commit', value: "${env.GIT_COMMIT}"], 
+                [key: 'Gabes bday', value: "07/11/1994"]
               ]
             )
           }
         }
       }
     }
+    
     // DO NOT uncomment until 10_01 Lab
+    /*
     stage('Staging Warm Up') {
       steps {
         echo "Waiting for the service to start..."
@@ -139,5 +142,6 @@ pipeline {
         )
       }
     }
+    */
   }
 }
